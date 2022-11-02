@@ -1,0 +1,1860 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous" />
+
+    <!--Main css-->
+    <link rel="stylesheet" href="main.css">
+    <title>Fakebook</title>
+</head>
+
+<body class="bg-grey">
+
+    <!-- ================= NAV BAR ======================= -->
+    <div class="bg-white d-flex align-items-center  shadow-sm" style="min-width: 50px; height: 55px; z-index: 5;">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <!-- Search part -->
+                <div class="col d-flex align-items-center">
+                    <!-- logo -->
+                    <i class="fab fa-facebook text-primary" style="font-size:2.5rem;"></i>
+                    <!-- Search bar -->
+                    <div class="input-group ms-2">
+
+                        <!--  mobile  -->
+                        <span class="input-group-prepend d-lg-none" id="searchMenu" data-bs-toggle="dropdown"
+                            aria-expanded="false" type="button" data-bs-auto-close="outside">
+
+                            <div class="input-group-text bg-grey border-0 rounded-circle " style="min-height:40px">
+                                <i class="fas fa-search  text-muted "></i>
+                            </div>
+                        </span>
+                        <!-- desktop display  -->
+                        <span class=" d-none d-lg-block" id="searchMenu" data-bs-toggle="dropdown" aria-expanded="false"
+                            type="button" data-bs-auto-close="outside">
+
+                            <div class="input-group-text bg-grey border-0 rounded-pill"
+                                style="min-height: 40px; min-width: 230px">
+                                <i class="fas fa-search me-2 text-muted"></i>
+                                <p class="m-0 fs-7 text-muted">Search Fakebook</p>
+                            </div>
+                        </span>
+
+                        <!-- search dropdown -->
+                        <ul class="dropdown-menu border-0 shadow p-3 overflow-auto"
+                            style="width: 20em; max-height:600px ;" aria-labelledby="searchMenu">
+
+                            <!-- input search -->
+                            <li>
+                                <input type="text" class="rounded-pill border-0 bg-grey dropdown-item"
+                                    placeholder="Search Fakebook" autofocus>
+                            </li>
+                            <!-- Items  -->
+                            <li class="my-4">
+                                <div class="aler fade show dropdown-item p-1 m-0  d-flex justify-content-between align-items-center"
+                                    role="alert">
+                                    <div class="d-flex align-items-center">
+                                        <img src="./image/tommyVercetti.jpeg" alt="Avatar"
+                                            style="width:35px;height:35px;object-fit: cover;"
+                                            class="rounded-circle me-2">
+                                        <p class="my-0">Tommy Vercetti</p>
+                                    </div>
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                        aria-label="Close"></button>
+                                </div>
+                            </li>
+                            <li class="my-4">
+                                <div class="aler fade show dropdown-item p-1 m-0  d-flex justify-content-between align-items-center"
+                                    role="alert">
+                                    <div class="d-flex align-items-center">
+                                        <img src="./image/sonnyForelli.webp" alt="Avatar"
+                                            style="width:35px;height:35px;object-fit: cover;"
+                                            class="rounded-circle me-2">
+                                        <p class="my-0">Sonny Forelli</p>
+                                    </div>
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                        aria-label="Close"></button>
+                                </div>
+                            </li>
+                            <li class="my-4">
+                                <div class="aler fade show dropdown-item p-1 m-0  d-flex justify-content-between align-items-center"
+                                    role="alert">
+                                    <div class="d-flex align-items-center">
+                                        <img src="./image/luffy.jpeg" alt="Avatar"
+                                            style="width:35px;height:35px;object-fit: cover;"
+                                            class="rounded-circle me-2">
+                                        <p class="my-0">Moneky D. Luffy</p>
+                                    </div>
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                        aria-label="Close"></button>
+                                </div>
+                            </li>
+                        </ul>
+
+
+                    </div>
+                </div>
+
+                <!-- Middle-nav  part -->
+                <div class="col d-none d-xl-flex  justify-content-center">
+                    <!-- home -->
+                    <div class="mx-4 nav__btn-active">
+                        <button class="btn px-4"><i class="fas fa-home text-muted fs-4"></i></button>
+                    </div>
+                    <!-- market -->
+                    <div class="mx-4 nav__btn">
+                        <button class="btn px-4"><i class="fas fa-store text-muted fs-4"></i></button>
+                    </div>
+                    <!-- group -->
+                    <div class="mx-4 nav__btn">
+                        <button class="btn px-4">
+                            <i class="fas fa-users text-muted fs-4 position-relative">
+                                <span
+                                    class="position-absolute  top-0  start-100  translate-middle badge rounded-pill bg-danger"
+                                    style="font-size: .6rem;">2</span></i>
+                        </button>
+                    </div>
+                    <!-- gaming -->
+                    <div class="mx-4 nav__btn">
+                        <button class="btn px-4"><i class="fas fa-gamepad text-muted fs-4"></i></button>
+                    </div>
+
+                </div>
+
+                <!--User part   -->
+                <div class="col d-flex align-items-center justify-content-end">
+                    <!-- Avatar  icon-->
+                    <div class="me-2 d-flex align-items-center justify-content-center" type="button"
+                        data-bs-auto-close="outside" data-bs-toggle="dropdown" id="avatarMenu">
+                        <img src="/image/giaBao.jpeg" alt="" class="rounded-circle" style="width: 38px; height: 38px;">
+
+                    </div>
+                    <!-- Avatar Dropdown -->
+                    <ul class=" dropdown-menu shadow p-3 border-0 " aria-labelledby="avatarMenu"
+                        style="width:20em; max-height: 500px">
+                        <!-- avatar header1 -->
+                        <li>
+                            <div class="shadow-sm rounded">
+
+                                <!-- LINK TO PROFILE PAGE -->
+                                <div class="d-flex align-items-center dropdown-item" type="button">
+                                    <!-- avatar -->
+                                    <div class="p-1">
+                                        <img src="/image/giaBao.jpeg" alt="" class="rounded-circle"
+                                            style="width: 38px; height: 38px;">
+                                    </div>
+                                    <!-- name -->
+                                    <div class="p-1 text-dark" style="font-weight: 500;">
+                                        <p class="mb-0"> Stephen Gia Bao Tran</p>
+                                    </div>
+                                </div>
+                                <hr style="width:80%; margin:auto;" class="text-secondary ">
+                                <div class="d-flex align-items-center justify-content-between dropdown-item"
+                                    type="button">
+
+                                    <p class="p-1 mb-0 text-primary fs-7">See all profile</p>
+                                </div>
+
+
+
+
+
+                            </div>
+                        </li>
+
+                        <!-- setting icon -->
+                        <li class="dropdown-item p-1 my-3 rounded" type="button">
+                            <div class="d-flex">
+                                <i class="fas fa-cog bg-grey p-2 rounded-circle"></i>
+                                <div class=" ms-3 d-flex justify-content-between align-items-center w-100">
+                                    <p class="m-0">Settings & Privacy</p>
+                                    <i class="fas fa-chevron-right"></i>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- help icon -->
+                        <li class="dropdown-item p-1 my-3 rounded" type="button">
+                            <div class="d-flex">
+                                <i class="fas fa-question-circle bg-grey p-2 rounded-circle"></i>
+                                <div class=" ms-3 d-flex justify-content-between align-items-center w-100">
+                                    <p class="m-0">Help & support</p>
+                                    <i class="fas fa-chevron-right"></i>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- Display icon -->
+                        <li class="dropdown-item p-1 my-3 rounded" type="button">
+                            <div class="d-flex">
+                                <i class="fas fa-moon bg-grey p-2 rounded-circle"></i>
+                                <div class=" ms-3 d-flex justify-content-between align-items-center w-100">
+                                    <p class="m-0">Display & accessibility</p>
+                                    <i class="fas fa-chevron-right"></i>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- Feedback icon -->
+                        <li class="dropdown-item p-1 my-3 rounded" type="button">
+                            <div class="d-flex">
+                                <i class="fas fa-exclamation-circle bg-grey p-2 rounded-circle"></i>
+                                <div class=" ms-3 d-flex justify-content-between align-items-center w-100">
+                                    <p class="m-0">Give feedback</p>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- Log-out icon -->
+                        <li class="dropdown-item p-1 my-3 rounded" onclick="" type="button">
+                            <div class="d-flex">
+                                <i class="fas fa-sign-out bg-grey p-2 rounded-circle"></i>
+                                <div class=" ms-3 d-flex justify-content-between align-items-center w-100">
+                                    <a href="./index.html" class="m-0"
+                                        style="text-decoration: none; color: inherit;">Log out</a>
+                                </div>
+                            </div>
+                        </li>
+
+                        <!-- hyperlink -->
+                        <li>
+                            <div class="p-1 my-3 fs-7 text-secondary" style="text-decoration:non">
+                                <a href="#">Privacy </a>&#x2022
+                                <a href="#">Terms </a>&#x2022
+                                <a href="#"> Advertising </a>&#x2022
+                                <a href="#"> Cookies </a>&#x2022
+                                <a href="#"> More </a>&#x2022
+                                <a href="#"> Meta 2022 &#169 </a>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                    <!-- Main-menu icon -->
+                    <div class="d-flex align-items-center justify-content-center p-1 mx-2 bg-grey rounded-circle"
+                        style="width: 38px; height: 38px; object-fit: cover;" id="mainMenu" data-bs-toggle="dropdown"
+                        aria-expanded="false" type="button" data-bs-auto-close="outside">
+                        <i class="fas fa-ellipsis-h "></i>
+                    </div>
+
+                    <!-- Main-meu Dropdown -->
+                    <ul class="dropdown-menu shadow p-3 border-0 overflow-auto" aria-labelledby="mainMenu"
+                        style="width:23em; max-height: 600px">
+
+                        <!-- menu -->
+                        <li>
+                            <div class="p-1 mx-2">
+                                <h6>Menu</h5>
+                            </div>
+                        </li>
+
+                        <!-- search -->
+                        <li class="p-1">
+                            <div class="input-group-text bg-grey border-0 rounded-pill"
+                                style="min-height: 40px; min-width: 230px;">
+                                <i class="fas fa-search me-2 text-muted"></i>
+                                <input type="text" class="form-control rounded-pill border-0 bg-grey"
+                                    placeholder="Search menu">
+                            </div>
+                        </li>
+
+                        <!-- Other settings -->
+                        <li class="my-2 p-1">
+                            <a href="#" class="text-decoration-none d-flex justify-content-between">
+                                <div class="p-2">
+                                    <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yj/r/QILj4kKZMLW.png" alt="Event"
+                                        style="width: 48px;height: 48px; object-fit: cover;">
+                                </div>
+
+                                <div>
+                                    <p class="m-0">Event</p>
+                                    <span class="fs-7 text-muted">Organise or find events and other things to do online
+                                        and nearby.</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li class="my-2 p-1">
+                            <a href="#" class="text-decoration-none d-flex justify-content-between">
+                                <div class="p-2">
+                                    <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yj/r/tSXYIzZlfrS.png" alt="Event"
+                                        style="width: 48px;height: 48px; object-fit: cover;">
+                                </div>
+
+                                <div>
+                                    <p class="m-0">Friends</p>
+                                    <span class="fs-7 text-muted">Search for friends or people you may know..</span>
+                                </div>
+                            </a>
+                        </li>
+
+
+                        <li class="my-2 p-1">
+                            <a href="#" class="text-decoration-none d-flex justify-content-between">
+                                <div class="p-2">
+                                    <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yj/r/Im_0d7HFH4n.png" alt="Groups"
+                                        style="width: 48px;height: 48px; object-fit: cover;">
+                                </div>
+
+                                <div>
+                                    <p class="m-0">Groups</p>
+                                    <span class="fs-7 text-muted">Connect with people who share your interests.</span>
+                                </div>
+                            </a>
+                        </li>
+
+
+                        <li class="my-2 p-1">
+                            <a href="#" class="text-decoration-none d-flex justify-content-between">
+                                <div class="p-2">
+                                    <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yo/r/hLkEFzsCyXC.png"
+                                        alt="Newsfeed" style="width: 48px;height: 48px; object-fit: cover;">
+                                </div>
+
+                                <div>
+                                    <p class="m-0">Newsfeed</p>
+                                    <span class="fs-7 text-muted">See relevant posts from people and Pages that you
+                                        follow.</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li class="my-2 p-1">
+                            <a href="#" class="text-decoration-none d-flex justify-content-between">
+                                <div class="p-2">
+                                    <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yW/r/nbUcQfHcgBv.png"
+                                        alt="Newsfeed" style="width: 48px;height: 48px; object-fit: cover;">
+                                </div>
+
+                                <div>
+                                    <p class="m-0">Favorite</p>
+                                    <span class="fs-7 text-muted">Follow and connect to stories that matter to
+                                        you.</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li class="my-2 p-1">
+                            <a href="#" class="text-decoration-none d-flex justify-content-between">
+                                <div class="p-2">
+                                    <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yF/r/kD5Sv0isIPs.png"
+                                        alt="mostRecent" style="width: 48px;height: 48px; object-fit: cover;">
+                                </div>
+
+                                <div>
+                                    <p class="m-0">Most recent</p>
+                                    <span class="fs-7 text-muted">See the most recent posts from your friends, groups,
+                                        Pages and more.</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li class="my-2 p-1">
+                            <a href="#" class="text-decoration-none d-flex justify-content-between">
+                                <div class="p-2">
+                                    <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yj/r/0gH3vbvr8Ee.png" alt="Pages"
+                                        style="width: 48px;height: 48px; object-fit: cover;">
+                                </div>
+
+                                <div>
+                                    <p class="m-0">Pages</p>
+                                    <span class="fs-7 text-muted">Discover and connect with businesses on
+                                        Facebook.</span>
+                                </div>
+                            </a>
+                        </li>
+
+                    </ul>
+
+                    <!--Messenger icon-->
+                    <div class="d-flex align-items-center justify-content-center p-1 mx-2 bg-grey rounded-circle"
+                        style="width: 38px; height: 38px; object-fit: cover;" id="chatMenu" data-bs-toggle="dropdown"
+                        aria-expanded="false" data-bs-auto-close="outside" type="button">
+                        <i class="fas fa-comment "></i>
+                    </div>
+                    <!-- Messenger Dropdown -->
+                    <ul class="dropdown-menu shadow p-3 border-0 overflow-auto" aria-labelledby="chatMenu"
+                        style="width:23em; max-height: 600px">
+                        <!-- header -->
+                        <li class="p-1">
+                            <div class="d-flex justify-content-between">
+                                <h5>Message</h5>
+                                <!-- icon -->
+                                <div>
+                                    <!-- setting icon -->
+                                    <i class="fas fa-ellipsis-h text-muted mx-2" type="button" id="settingMenu"
+                                        data-bs-toggle="dropdown" aria-expanded="false"
+                                        data-bs-auto-close="outside"></i>
+                                    <!--data-bs-auto-close allows to have nested dropdown inside another-->
+                                    <!-- ==== MESSENGER SETTING DROPDOWN ===== -->
+                                    <ul class="dropdown-menu shadow" aria-labelledby="settingMenu"
+                                        style="width:18em; max-width: 400px;">
+                                        <!-- title for setting  -->
+                                        <div class="p-2">
+                                            <h5>Chat Settings</h5>
+                                            <p class="text-muted fs-7">Customzie your Messenger experience.</p>
+                                        </div>
+
+                                        <!-- item 1 -->
+                                        <li>
+                                            <div
+                                                class="dropdown-item d-flex align-items-center justify-content-between">
+                                                <div class="d-flex align-items-center">
+                                                    <i class="fas fa-phone-alt me-3"></i>
+                                                    <p class="mb-0">Incoming call sound</p>
+                                                </div>
+                                                <div class="m-0 form-check form-switch">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        id="flexSwitchCheckDefault" checked>
+                                                </div>
+
+                                            </div>
+                                        </li>
+
+                                        <!-- item 2 -->
+                                        <li>
+                                            <div
+                                                class="dropdown-item d-flex align-items-center justify-content-between">
+                                                <div class="d-flex align-items-center">
+                                                    <i class="fas fa-phone-alt me-3"></i>
+                                                    <p class="mb-0">Incoming call sound</p>
+                                                </div>
+                                                <div class="m-0 form-check form-switch">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        id="flexSwitchCheckDefault" checked>
+                                                </div>
+
+                                            </div>
+                                        </li>
+
+                                        <!-- item 3   -->
+                                        <li>
+                                            <div
+                                                class="dropdown-item d-flex align-items-center justify-content-between">
+                                                <div class="d-flex align-items-center">
+                                                    <i class="fas fa-phone-alt me-3"></i>
+                                                    <p class="mb-0">Incoming call sound</p>
+                                                </div>
+                                                <div class="m-0 form-check form-switch">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        id="flexSwitchCheckDefault">
+                                                </div>
+
+                                            </div>
+                                        </li>
+
+                                        <hr>
+                                        <!-- item 4  -->
+                                        <li>
+                                            <div
+                                                class="dropdown-item d-flex align-items-center justify-content-between">
+                                                <div class="d-flex align-items-center">
+                                                    <i class="fas fa-phone-alt me-3"></i>
+                                                    <p class="mb-0">Incoming call sound</p>
+                                                </div>
+                                                <div class="m-0 form-check form-switch">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        id="flexSwitchCheckDefault">
+                                                </div>
+
+                                            </div>
+                                        </li>
+
+                                        <!-- item 5 -->
+                                        <li>
+                                            <div
+                                                class="dropdown-item d-flex align-items-center justify-content-between">
+                                                <div class="d-flex align-items-center">
+                                                    <i class="fas fa-phone-alt me-3"></i>
+                                                    <p class="mb-0">Incoming call sound</p>
+                                                </div>
+                                                <div class="m-0 form-check form-switch">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        id="flexSwitchCheckDefault">
+                                                </div>
+
+                                            </div>
+                                        </li>
+
+                                        <!-- item 6 -->
+                                        <li>
+                                            <div
+                                                class="dropdown-item d-flex align-items-center justify-content-between">
+                                                <div class="d-flex align-items-center">
+                                                    <i class="fas fa-phone-alt me-3"></i>
+                                                    <p class="mb-0">Incoming call sound</p>
+                                                </div>
+                                                <div class="m-0 form-check form-switch">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        id="flexSwitchCheckDefault">
+                                                </div>
+
+                                            </div>
+                                        </li>
+
+                                    </ul>
+
+                                    <!-- expand icon -->
+                                    <i class="fas fa-expand-arrows-alt text-muted mx-2" type="button"></i>
+                                    <!-- new message icon -->
+                                    <i class="fas fa-edit text-muted mx-2" type="button"></i>
+                                </div>
+
+                            </div>
+                        </li>
+                        <!-- search -->
+                        <li class="p-1">
+                            <input type="text" class="form-control rounded-pill border-0 bg-grey"
+                                placeholder="Search menu">
+                        </li>
+                        <!-- messages -->
+                        <!-- message 1 -->
+                        <li class="my-3 p-1 dropdown-item" type="button">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <!-- avatar -->
+                                <div class="p-2">
+                                    <img src="./image/albert.jpeg" alt="Avatar" class="rounded-circle"
+                                        style="object-fit: cover; width: 52px; height: 52px;">
+                                </div>
+                                <!-- name and message -->
+                                <div>
+                                    <p class="fs-7 m-0">Albert Einstein</p>
+                                    <span class="text-muted fs-7">“Time is relative; its only wor... &#x2022 20y</span>
+                                </div>
+
+                                <!-- "seen" icon -->
+                                <div class="p-2 d-flex align-items-end">
+                                    <img src="./image/albert.jpeg" alt="Avatar" class="rounded-circle"
+                                        style="object-fit: cover; width: 16px; height: 16px;">
+                                </div>
+
+                            </div>
+                        </li>
+                        <!-- message 2 -->
+                        <li class="my-3 p-1 dropdown-item" type="button">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <!-- avatar -->
+                                <div class="p-2">
+                                    <img src="./image/acsimet.jpeg" alt="Avatar" class="rounded-circle"
+                                        style="object-fit: cover; width: 52px; height: 52px;">
+                                </div>
+                                <!-- name and message -->
+                                <div>
+                                    <p class="fs-7 m-0">Archimedes of Syracuse</p>
+                                    <span class="text-muted fs-7">Give me a LEVER long enough! &#x2022 30y</span>
+                                </div>
+
+                                <!-- "seen" icon -->
+                                <div class="p-2 d-flex align-items-end">
+                                    <img src="./image/acsimet.jpeg" alt="Avatar" class="rounded-circle"
+                                        style="object-fit: cover; width: 16px; height: 16px;">
+                                </div>
+
+                            </div>
+                        </li>
+                        <!-- message 3 -->
+                        <li class="my-3 p-1 dropdown-item" type="button">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <!-- avatar -->
+                                <div class="p-2">
+                                    <img src="./image/mark.jpeg" alt="Avatar" class="rounded-circle"
+                                        style="object-fit: cover; width: 52px; height: 52px;">
+                                </div>
+                                <!-- name and message -->
+                                <div>
+                                    <p class="fs-7 m-0">Mark Zuckerberg</p>
+                                    <span class="text-muted fs-7">OMG! Fakebook is the best!!! &#x2022 now</span>
+                                </div>
+
+                                <!-- "seen" icon -->
+                                <div class="p-2 d-flex align-items-end">
+                                    <img src="./image/mark.jpeg" alt="Avatar" class="rounded-circle"
+                                        style="object-fit: cover; width: 16px; height: 16px;">
+                                </div>
+
+                            </div>
+                        </li>
+                        <!-- message 4 -->
+                        <li class="my-3 p-1 dropdown-item" type="button">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <!-- avatar -->
+                                <div class="p-2">
+                                    <img src="./image/trump.jpeg" alt="Avatar" class="rounded-circle"
+                                        style="object-fit: cover; width: 52px; height: 52px;">
+                                </div>
+                                <!-- name and message -->
+                                <div>
+                                    <p class="fs-7 m-0">Donald J. Trumps</p>
+                                    <span class="text-muted fs-7">Let's make America great again! &#x2022 2d</span>
+                                </div>
+
+                                <!-- "seen" icon -->
+                                <div class="p-2 d-flex align-items-end">
+                                    <img src="./image/trump.jpeg" alt="Avatar" class="rounded-circle"
+                                        style="object-fit: cover; width: 16px; height: 16px;">
+                                </div>
+
+                            </div>
+                        </li>
+                        <!-- message 5 -->
+                        <li class="my-3 p-1 dropdown-item" type="button">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <!-- avatar -->
+                                <div class="p-2">
+                                    <img src="./image/goku.jpeg" alt="Avatar" class="rounded-circle"
+                                        style="object-fit: cover; width: 52px; height: 52px;">
+                                </div>
+                                <!-- name and message -->
+                                <div>
+                                    <p class="fs-7 m-0">Son Goku</p>
+                                    <span class="text-muted fs-7">Haiii, I am the Super Saiyan! &#x2022 now</span>
+                                </div>
+
+                                <!-- "seen" icon -->
+                                <div class="p-2 d-flex align-items-end">
+                                    <img src="./image/goku.jpeg" alt="Avatar" class="rounded-circle"
+                                        style="object-fit: cover; width: 16px; height: 16px;">
+                                </div>
+
+                            </div>
+                        </li>
+                        <!-- message 6 -->
+                        <li class="my-3 p-1 dropdown-item" type="button">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <!-- avatar -->
+                                <div class="p-2">
+                                    <img src="./image/spongebob.png" alt="Avatar" class="rounded-circle"
+                                        style="object-fit: cover; width: 52px; height: 52px;">
+                                </div>
+                                <!-- name and message -->
+                                <div>
+                                    <p class="fs-7 m-0">Spongebob SquarePants</p>
+                                    <span class="text-muted fs-7">The best time to wear pant... &#x2022 10m</span>
+                                </div>
+
+                                <!-- "seen" icon -->
+                                <div class="p-2 d-flex align-items-end">
+                                    <img src="./image/spongebob.png" alt="Avatar" class="rounded-circle"
+                                        style="object-fit: cover; width: 16px; height: 16px;">
+                                </div>
+
+                            </div>
+                        </li>
+                        <!-- message 7 -->
+                        <li class="my-3 p-1 dropdown-item" type="button">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <!-- avatar -->
+                                <div class="p-2">
+                                    <img src="./image/naruto.jpeg" alt="Avatar" class="rounded-circle"
+                                        style="object-fit: cover; width: 52px; height: 52px;">
+                                </div>
+                                <!-- name and message -->
+                                <div>
+                                    <p class="fs-7 m-0">Naruto Uchiha</p>
+                                    <span class="text-muted fs-7">Hey wanna go for Ramen to... &#x2022 20m</span>
+                                </div>
+
+                                <!-- "seen" icon -->
+                                <div class="p-2 d-flex align-items-end">
+                                    <img src="./image/naruto.jpeg" alt="Avatar" class="rounded-circle"
+                                        style="object-fit: cover; width: 16px; height: 16px;">
+                                </div>
+
+                            </div>
+                        </li>
+
+
+
+                    </ul>
+                    <!-- Notifications icon -->
+                    <div class="d-flex align-items-center justify-content-center p-1 mx-2 bg-grey rounded-circle"
+                        style="width: 38px; height: 38px; object-fit: cover;" id="notiMenu" data-bs-toggle="dropdown"
+                        aria-expanded="false" data-bs-auto-close="outside" type="button">
+                        <i class="fas fa-bell "></i>
+                    </div>
+                    <!-- Notifications Dropdown -->
+                    <ul class="dropdown-menu shadow p-3 border-0 overflow-auto" aria-labelledby="notiMenu"
+                        style="width:20em; max-height: 600px">
+                        <!-- header -->
+                        <li class="p-1">
+                            <div class="d-flex justify-content-between">
+                                <h5>Notifications</h5>
+                                <!-- Notifications setting icon -->
+                                <div class="d-flex align-items-center justify-content-center p-1 mx-2 bg-grey rounded-circle"
+                                    style="width: 38px; height: 38px; object-fit: cover;" id="notiSettingDropdown"
+                                    data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside"
+                                    type="button">
+                                    <i class="fas fa-ellipsis-h bg-grey"></i>
+                                </div>
+                                <!-- Notifications setting dropdown -->
+                                <ul class="dropdown-menu shadow " aria-labelledby="notiSettingDropdown"
+                                    style="width:12em; max-width: 320px;">
+                                    <!-- first item -->
+                                    <div class="dropdown-item">
+                                        <div class="d-flex justify-content-start align-items-center">
+                                            <i class="fas fa-check p-2"></i>
+                                            <p class="m-0 fs-7 ">Mark all as read</p>
+                                        </div>
+                                    </div>
+                                    <!-- second item -->
+                                    <div class="dropdown-item">
+                                        <div class="d-flex justify-content-start align-items-center">
+                                            <i class="fas fa-computer p-2"></i>
+                                            <p class="m-0 fs-7 ">Open notifications</p>
+                                        </div>
+                                    </div>
+                                </ul>
+                                <!-- Notifications content -->
+                            </div>
+                        </li>
+
+                        <!-- read or unread messages -->
+                        <li>
+                            <div>
+                                <button class="btn rounded-pill bg-primary text-white fs-7" check>All</button>
+                                <button class="btn rounded-pill bg-grey p-2 fs-7" check>Unread</button>
+                            </div>
+
+                        </li>
+
+                        <!-- middle bar -->
+                        <li class="p-1">
+                            <div class="d-flex justify-content-between ">
+                                <p>Earlier</p>
+                                <p class="text-primary" type="button">See all</p>
+                            </div>
+                        </li>
+
+
+                        <!-- notifications content -->
+                        <!-- notifications 1 -->
+                        <li class="my-2 p-1 dropdown-item" type="button">
+                            <div class="d-flex align-items-start justify-content-evenly">
+                                <!-- avatar -->
+                                <div class="p-2">
+                                    <img src="./image/TomAndJerry.jpeg" alt="Avatar" class="rounded-circle"
+                                        style="object-fit: cover; width: 52px; height: 52px;">
+                                </div>
+                                <!-- name and message -->
+                                <div class="p-2">
+                                    <p class="mb-0 fs-7 text-wrap">Lorem ipsum dolor sit amet, consectetur adipisicing
+                                        elit. Nemo, cumque?.</p>
+                                    <p class="mb-0 fs-7 text-primary ">21 hours ago.</p>
+                                </div>
+                                <!-- "unread" state  -->
+                                <div class="text-center my-auto">
+                                    <span class=" bg-primary d-block rounded-circle"
+                                        style="width: 15px; height: 15px;"></span>
+                                </div>
+
+                            </div>
+                        </li>
+                        <!-- notifications 2 -->
+                        <li class="my-2 p-1 dropdown-item" type="button">
+                            <div class="d-flex align-items-start justify-content-evenly">
+                                <!-- avatar -->
+                                <div class="p-2">
+                                    <img src="./image/pinkPanther.jpeg" alt="Avatar" class="rounded-circle"
+                                        style="object-fit: cover; width: 52px; height: 52px;">
+                                </div>
+                                <!-- name and message -->
+                                <div class="p-2">
+                                    <p class="mb-0 fs-7 text-wrap">Lorem ipsum dolor sit amet, consectetur adipisicing
+                                        elit. Nemo, cumque?.</p>
+                                    <p class="mb-0 fs-7 text-primary ">21 hours ago.</p>
+                                </div>
+                                <!-- "unread" state  -->
+                                <div class="text-center my-auto">
+                                    <span class=" bg-primary d-block rounded-circle"
+                                        style="width: 15px; height: 15px;"></span>
+                                </div>
+
+                            </div>
+                        </li>
+                        <!-- notifications 3 -->
+                        <li class="my-2 p-1 dropdown-item" type="button">
+                            <div class="d-flex align-items-start justify-content-evenly">
+                                <!-- avatar -->
+                                <div class="p-2">
+                                    <img src="./image/donaldDuck.jpg" alt="Avatar" class="rounded-circle"
+                                        style="object-fit: cover; width: 52px; height: 52px;">
+                                </div>
+                                <!-- name and message -->
+                                <div class="p-2">
+                                    <p class="mb-0 fs-7 text-wrap">Lorem ipsum dolor sit amet, consectetur adipisicing
+                                        elit. Nemo, cumque?.</p>
+                                    <p class="mb-0 fs-7 text-primary ">21 hours ago.</p>
+                                </div>
+                                <!-- "unread" state  -->
+                                <div class="text-center my-auto">
+                                    <span class=" bg-primary d-block rounded-circle"
+                                        style="width: 15px; height: 15px;"></span>
+                                </div>
+
+                            </div>
+                        </li>
+                        <!-- notifications 4-->
+                        <li class="my-2 p-1 dropdown-item" type="button">
+                            <div class="d-flex align-items-start justify-content-evenly">
+                                <!-- avatar -->
+                                <div class="p-2">
+                                    <img src="./image/doraemon.jpeg" alt="Avatar" class="rounded-circle"
+                                        style="object-fit: cover; width: 52px; height: 52px;">
+                                </div>
+                                <!-- name and message -->
+                                <div class="p-2">
+                                    <p class="mb-0 fs-7 text-wrap">Lorem ipsum dolor sit amet, consectetur adipisicing
+                                        elit. Nemo, cumque?.</p>
+                                    <p class="mb-0 fs-7 text-primary ">21 hours ago.</p>
+                                </div>
+                                <!-- "unread" state  -->
+                                <div class="text-center my-auto">
+                                    <span class=" bg-primary d-block rounded-circle"
+                                        style="width: 15px; height: 15px;"></span>
+                                </div>
+
+                            </div>
+                        </li>
+                        <!-- notifications 5 -->
+                        <li class="my-2 p-1 dropdown-item" type="button">
+                            <div class="d-flex align-items-start justify-content-evenly">
+                                <!-- avatar -->
+                                <div class="p-2">
+                                    <img src="./image/bungee.jpeg" alt="Avatar" class="rounded-circle"
+                                        style="object-fit: cover; width: 52px; height: 52px;">
+                                </div>
+                                <!-- name and message -->
+                                <div class="p-2">
+                                    <p class="mb-0 fs-7 text-wrap">Lorem ipsum dolor sit amet, consectetur adipisicing
+                                        elit. Nemo, cumque?.</p>
+                                    <p class="mb-0 fs-7 text-primary ">21 hours ago.</p>
+                                </div>
+                                <!-- "unread" state  -->
+                                <div class="text-center my-auto">
+                                    <span class=" bg-primary d-block rounded-circle"
+                                        style="width: 15px; height: 15px;"></span>
+                                </div>
+
+                            </div>
+                        </li>
+                        <!-- notifications 6  -->
+                        <li class="my-2 p-1 dropdown-item" type="button">
+                            <div class="d-flex align-items-start justify-content-evenly">
+                                <!-- avatar -->
+                                <div class="p-2">
+                                    <img src="./image/phineasAndFerb.jpg" alt="Avatar" class="rounded-circle"
+                                        style="object-fit: cover; width: 52px; height: 52px;">
+                                </div>
+                                <!-- name and message -->
+                                <div class="p-2">
+                                    <p class="mb-0 fs-7 text-wrap">Lorem ipsum dolor sit amet, consectetur adipisicing
+                                        elit. Nemo, cumque?.</p>
+                                    <p class="mb-0 fs-7 text-primary ">21 hours ago.</p>
+                                </div>
+                                <!-- "unread" state  -->
+                                <div class="text-center my-auto">
+                                    <span class=" bg-primary d-block rounded-circle"
+                                        style="width: 15px; height: 15px;"></span>
+                                </div>
+
+                            </div>
+                        </li>
+
+
+                    </ul>
+
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= CONTENT ======================= -->
+    <div class="container-fluid">
+        <div class="row d-flex justify-content-evenly" style="padding-top:45px">
+            <!-- ================= SIDEBAR ======================= -->
+            <div class="col col-lg-3 px-1  ">
+                <div class="d-none d-lg-block  h-100 overflow-auto">
+                    <ul class="list-unstyled pt-1 d-flex flex-column">
+                        <!-- ======== TOP SECTION ======= -->
+                        <!-- Avatar -->
+                        <li>
+                            <a href="#"
+                                class="rounded my-auto dropdown-item d-flex align-items-center justify-content-start py-2">
+                                <div>
+                                    <img src="./image/giaBao.jpeg" alt="Avatar"
+                                        style="width: 32px; height: 32px; object-fit: cover;"
+                                        class="rounded-circle me-2">
+                                </div>
+                                <div>
+                                    <p class="ms-2 my-auto">Stephen Tran</p>
+                                </div>
+                            </a>
+                        </li>
+                        <!-- Friends -->
+                        <li>
+                            <a href="#"
+                                class="rounded my-auto dropdown-item d-flex align-items-center justify-content-start py-2">
+                                <div>
+                                    <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yj/r/tSXYIzZlfrS.png" alt="Avatar"
+                                        style="width: 32px; height: 32px; object-fit: cover;"
+                                        class="rounded-circle me-2">
+                                </div>
+                                <div>
+                                    <p class="ms-2 my-auto">Friends</p>
+                                </div>
+                            </a>
+                        </li>
+                        <!-- Saved -->
+                        <li>
+                            <a href="#"
+                                class="rounded my-auto dropdown-item d-flex align-items-center justify-content-start py-2">
+                                <div>
+                                    <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yA/r/KlDlsO3UxDM.png" alt="Avatar"
+                                        style="width: 32px; height: 32px; object-fit: cover;"
+                                        class="rounded-circle me-2">
+                                </div>
+                                <div>
+                                    <p class="ms-2 my-auto">Saved</p>
+                                </div>
+                            </a>
+                        </li>
+                        <!-- Groups -->
+                        <li>
+                            <a href="#"
+                                class="rounded my-auto dropdown-item d-flex align-items-center justify-content-start py-2">
+                                <div>
+                                    <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yj/r/Im_0d7HFH4n.png" alt="Avatar"
+                                        style="width: 32px; height: 32px; object-fit: cover;"
+                                        class="rounded-circle me-2">
+                                </div>
+                                <div>
+                                    <p class="ms-2 my-auto">Groups</p>
+                                </div>
+                            </a>
+                        </li>
+                        <!-- Pages -->
+                        <li>
+                            <a href="#"
+                                class="rounded my-auto dropdown-item d-flex align-items-center justify-content-start py-2">
+                                <div>
+                                    <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yj/r/0gH3vbvr8Ee.png" alt="Avatar"
+                                        style="width: 32px; height: 32px; object-fit: cover;"
+                                        class="rounded-circle me-2">
+                                </div>
+                                <div>
+                                    <p class="ms-2 my-auto">Pages</p>
+                                </div>
+                            </a>
+                        </li>
+                        <!-- Event -->
+                        <li>
+                            <a href="#"
+                                class="rounded my-auto dropdown-item d-flex align-items-center justify-content-start py-2">
+                                <div>
+                                    <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yj/r/QILj4kKZMLW.png" alt="Avatar"
+                                        style="width: 32px; height: 32px; object-fit: cover;"
+                                        class="rounded-circle me-2">
+                                </div>
+                                <div>
+                                    <p class="ms-2 my-auto">Events</p>
+                                </div>
+                            </a>
+                        </li>
+
+                        <!-- See more  -->
+                        <li>
+                            <div class="rounded accordion my-auto dropdown-item d-flex align-items-center justify-content-start py-2"
+                                type="button" type="button" data-bs-toggle="collapse" data-bs-target="#seeMoreAccordion"
+                                aria-expanded="true" aria-controls="seeMoreAccordion">
+                                <div class="rounded-circle me-2 d-flex align-items-center justify-content-center"
+                                    style="width: 32px; height: 32px; object-fit: cover;background: #d5d5d5; ">
+                                    <i alt="Avatar" class="fas fa-chevron-down"></i>
+                                </div>
+                                <div>
+                                    <p class="ms-2 my-auto">See more</p>
+                                </div>
+                            </div>
+
+                            <!-- =====SEE MORE ACCORDION (DROP DOWN) -->
+                            <div id="seeMoreAccordion" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                                data-bs-parent="#accordionExample">
+                                <!-- Ad centre -->
+                                <div>
+                                    <a href="#"
+                                        class="rounded my-auto dropdown-item d-flex align-items-center justify-content-start py-2">
+                                        <div>
+                                            <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yc/r/lqymE2iRETE.png"
+                                                alt="Avatar" style="width: 32px; height: 32px; object-fit: cover;"
+                                                class="rounded-circle me-2">
+                                        </div>
+                                        <div>
+                                            <p class="ms-2 my-auto">Ad Centre</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <!-- Ads Manager -->
+                                <div>
+                                    <a href="#"
+                                        class="rounded my-auto dropdown-item d-flex align-items-center justify-content-start py-2">
+                                        <div>
+                                            <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yM/r/C949oxkze-S.png"
+                                                alt="Avatar" style="width: 32px; height: 32px; object-fit: cover;"
+                                                class="rounded-circle me-2">
+                                        </div>
+                                        <div>
+                                            <p class="ms-2 my-auto">Ads Manager</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <!-- Climate Science Centre -->
+                                <div>
+                                    <a href="#"
+                                        class="rounded my-auto dropdown-item d-flex align-items-center justify-content-start py-2">
+                                        <div>
+                                            <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yS/r/4LP02rGQaMl.png"
+                                                alt="Avatar" style="width: 32px; height: 32px; object-fit: cover;"
+                                                class="rounded-circle me-2">
+                                        </div>
+                                        <div>
+                                            <p class="ms-2 my-auto">Climate Science Centre</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <!-- COVID-19 -->
+                                <div>
+                                    <a href="#"
+                                        class="rounded my-auto dropdown-item d-flex align-items-center justify-content-start py-2">
+                                        <div>
+                                            <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yi/r/FZK_jEWapM0.png"
+                                                alt="Avatar" style="width: 32px; height: 32px; object-fit: cover;"
+                                                class="rounded-circle me-2">
+                                        </div>
+                                        <div>
+                                            <p class="ms-2 my-auto">COVID-19 Information Centre</p>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <!-- Crisis Response -->
+                                <div>
+                                    <a href="#"
+                                        class="rounded my-auto dropdown-item d-flex align-items-center justify-content-start py-2">
+                                        <div>
+                                            <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yZ/r/vG0kc45wHaG.png"
+                                                alt="Avatar" style="width: 32px; height: 32px; object-fit: cover;"
+                                                class="rounded-circle me-2">
+                                        </div>
+                                        <div>
+                                            <p class="ms-2 my-auto">Crisis Response</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+
+                        <hr>
+
+                        <!-- ===== SHORTCUT SECTION ====== -->
+                        <li>
+                            <div class=" px-3 d-flex align-items-center justify-content-between">
+
+                                <!-- Title -->
+                                <h6 class="text-muted">Your Shortcuts</h6>
+                                <p class="fs-7 mb-0" style="color: blue;" type="button" data-bs-toggle="modal"
+                                    data-bs-target="#createShortcut">Edit</p>
+
+                                <!-- Shortcut edit modal -->
+                                <div class="modal fade" id="createShortcut" tabindex="-1"
+                                    aria-labelledby="createModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modial-dialog-centered">
+                                        <div class="modal-content">
+                                            <!-- head -->
+                                            <div class="modal-header">
+                                                <div>
+                                                    <h2 class="modal-title text-center" id="createModalLabel">Edit your
+                                                        shortcuts</h2>
+                                                </div>
+                                                <button type="button" class="btn-close bg-secondary rounded-circle"
+                                                    data-bs-dismiss="modal" aria-label="Close"></button>
+                                                <hr class="text-muted">
+                                            </div>
+
+                                            <!-- Shortcut modal body -->
+                                            <div class="modal-body">
+                                                <!-- description text -->
+                                                <p class="text-muted fs-7">
+                                                    Shortcuts provide quick access to what you do most on Facebook. Your
+                                                    shortcuts are sorted
+                                                    automatically, but you can pin something so it's always shown at the
+                                                    top or hide it from the list.
+                                                </p>
+
+                                                <form>
+                                                    <!-- Search bar -->
+                                                    <div class="input-group-text bg-grey border-0 rounded-pill my-3"
+                                                        style="min-height: 40px; min-width: 230px">
+                                                        <i class="fas fa-search me-2 text-muted"></i>
+                                                        <p class="m-0 fs-7 text-muted">Search your Pages, groups and
+                                                            games</p>
+                                                    </div>
+                                                    <!-- first item -->
+                                                    <div class="row my-3 align-items-center">
+                                                        <div class="col-8">
+                                                            <a href="#"
+                                                                class=" my-auto dropdown-item d-flex align-items-center justify-content-start py-3">
+                                                                <div>
+                                                                    <img src="./image/hngtdt.jpeg" alt="Avatar"
+                                                                        style="width: 40px; height: 40px; object-fit: cover; border: .5px solid;"
+                                                                        class=" me-2 rounded">
+                                                                </div>
+                                                                <div>
+                                                                    <p class="ms-1 my-auto">Hội Những Người Từng Đi Tù
+                                                                        💁‍♀️ </p>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+
+                                                        <div class="col">
+                                                            <select class="form-select">
+                                                                <option value="1" selected>Sort automatically</option>
+                                                                <option value="2">Pin to top</option>
+                                                                <option value="3">Hide</option>
+                                                            </select>
+                                                        </div>
+
+                                                    </div>
+
+                                                    <!-- second item -->
+                                                    <div class="row my-3 align-items-center">
+                                                        <div class="col-8">
+                                                            <a href="#"
+                                                                class=" my-auto dropdown-item d-flex align-items-center justify-content-start py-3">
+                                                                <div>
+                                                                    <img src="./image/mto.jpeg" alt="Avatar"
+                                                                        style="width: 40px; height: 40px; object-fit: cover; border: .5px solid;"
+                                                                        class=" me-2 rounded">
+                                                                </div>
+                                                                <div>
+                                                                    <p class="ms-2 my-auto"> Miền Tây Ơi! </p>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+
+                                                        <div class="col">
+                                                            <select class="form-select">
+                                                                <option value="1" selected>Sort automatically</option>
+                                                                <option value="2">Pin to top</option>
+                                                                <option value="3">Hide</option>
+                                                            </select>
+                                                        </div>
+
+                                                    </div>
+
+                                                    <!-- third item -->
+                                                    <div class="row my-3 align-items-center">
+                                                        <div class="col-8">
+                                                            <a href="#"
+                                                                class=" my-auto dropdown-item d-flex align-items-center justify-content-start py-3">
+                                                                <div>
+                                                                    <img src="./image/stephenChow.jpeg" alt="Avatar"
+                                                                        style="width: 40px; height: 40px; object-fit: cover; border: .5px solid;"
+                                                                        class=" me-2 rounded">
+                                                                </div>
+                                                                <div>
+                                                                    <p class="ms-2 my-auto"> Stephen Chow VNFC </p>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+
+                                                        <div class="col">
+                                                            <select class="form-select">
+                                                                <option value="1" selected>Sort automatically</option>
+                                                                <option value="2">Pin to top</option>
+                                                                <option value="3">Hide</option>
+                                                            </select>
+                                                        </div>
+
+                                                    </div>
+
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+                        </li>
+
+                        <li>
+                            <a href="#"
+                                class=" my-auto dropdown-item d-flex align-items-center justify-content-start py-3">
+                                <div>
+                                    <img src="./image/hngtdt.jpeg" alt="Avatar"
+                                        style="width: 40px; height: 40px; object-fit: cover; border: .5px solid;"
+                                        class=" me-2 rounded">
+                                </div>
+                                <div>
+                                    <p class="ms-2 my-auto">Hội Những Người Từng Đi Tù 💁‍♀️</p>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#"
+                                class=" my-auto dropdown-item d-flex align-items-center justify-content-start py-3">
+                                <div>
+                                    <img src="./image/qsjo.jpeg" alt="Avatar"
+                                        style="width: 40px; height: 40px; object-fit: cover; border: .5px solid;"
+                                        class=" me-2 rounded">
+                                </div>
+                                <div>
+                                    <p class="ms-2 my-auto">Quick Side Jobs Ottawa</p>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#"
+                                class=" my-auto dropdown-item d-flex align-items-center justify-content-start py-3">
+                                <div>
+                                    <img src="./image/mto.jpeg" alt="Avatar"
+                                        style="width: 40px; height: 40px; object-fit: cover; border: .5px solid;"
+                                        class=" me-2 rounded">
+                                </div>
+                                <div>
+                                    <p class="ms-2 my-auto">Miền Tây Ơi!</p>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#"
+                                class=" my-auto dropdown-item d-flex align-items-center justify-content-start py-3">
+                                <div>
+                                    <img src="./image/stephenChow.jpeg" alt="Avatar"
+                                        style="width: 40px; height: 40px; object-fit: cover; border: .5px solid;"
+                                        class=" me-2 rounded">
+                                </div>
+                                <div>
+                                    <p class="ms-2 my-auto">Stephen Chow VNFC</p>
+                                </div>
+                            </a>
+                        </li>
+
+                        <!-- Term -->
+                        <li>
+                            <div class="p-1 my-3 fs-7 text-secondary" style="text-decoration:non">
+                                <a href="#">Privacy </a>&#x2022
+                                <a href="#">Terms </a>&#x2022
+                                <a href="#"> Advertising </a>&#x2022
+                                <a href="#">Safety </a>&#x2022
+                                <a href="#"> Cookies </a>&#x2022
+                                <a href="#"> More </a>&#x2022
+                                <a href="#"> Meta 2022 &#169 </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- ================= TIMELINE ======================= -->
+            <div class="col-12 col-lg-6 px-4">
+                <div class="bg-white p-3 rounded border shadow">
+                    <!-- avatar -->
+                    <div class="d-flex" type="button">
+                        <div class="p-2">
+                            <img src="./image/giaBao.jpeg" alt="avatar" class="rounded-circle me-2"
+                                style="width: 38px; height: 38px; object-fit: cover" />
+                        </div>
+                        <input type="text" class="form-control rounded-pill border-0 bg-gray pointer" disabled
+                            placeholder="What's on your mind, Stephen?" />
+                    </div>
+                    <hr>
+                    <!-- Post, photo, acticity icon -->
+                    <div class="d-flex flex-column flex-lg-row mt-3">
+                        <!-- a 1 -->
+                        <div class=" dropdown-item rounded d-flex align-items-center justify-content-center"
+                            type="button">
+                            <i class="fas fa-video me-2 text-danger"></i>
+                            <p class="m-0 text-muted">Live Video</p>
+                        </div>
+                        <!-- a 2 -->
+                        <div class=" dropdown-item rounded d-flex align-items-center justify-content-center"
+                            type="button">
+                            <i class="fas fa-photo-video me-2 text-success"></i>
+                            <p class="m-0 text-muted">Photo/Video</p>
+                        </div>
+                        <!-- a 3 -->
+                        <div class=" dropdown-item rounded d-flex align-items-center justify-content-center"
+                            type="button">
+                            <i class="fas fa-face-laugh me-2 text-warning"></i>
+                            <p class="m-0 text-muted">Feeling/Activity</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- ===POST=== -->
+                <!-- post 1 -->
+
+                <div class="bg-white p-4 rounded shadow mt-3">
+                    <!-- author -->
+                    <div class="d-flex justify-content-between">
+                        <!-- avatar -->
+                        <div class="d-flex">
+                            <img src="https://source.unsplash.com/collection/happy-people" alt="avatar"
+                                class="rounded-circle me-2" style="width: 38px; height: 38px; object-fit: cover" />
+                            <div>
+                                <p class="m-0 fw-bold">John</p>
+                                <span class="text-muted fs-7">July 17 at 1:23 pm</span>
+                            </div>
+                        </div>
+                        <!-- edit -->
+                        <i class="fas fa-ellipsis-h" type="button" id="post1Menu" data-bs-toggle="dropdown"
+                            aria-expanded="false"></i>
+                        <!-- edit menu -->
+                        <ul class="dropdown-menu border-0 shadow" aria-labelledby="post1Menu">
+                            <li class="d-flex align-items-center">
+                                <a class="
+                        dropdown-item
+                        d-flex
+                        justify-content-around
+                        align-items-center
+                        fs-7
+                      " href="#">
+                                    Edit Post</a>
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <a class="
+                        dropdown-item
+                        d-flex
+                        justify-content-around
+                        align-items-center
+                        fs-7
+                      " href="#">
+                                    Delete Post</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- post content -->
+                    <div class="mt-3">
+                        <!-- content -->
+                        <div>
+                            <p>
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                Quae fuga incidunt consequatur tenetur doloremque officia
+                                corrupti provident tempore vitae labore?
+                            </p>
+                            <img src="https://source.unsplash.com/random/12" alt="post image"
+                                class="img-fluid rounded" />
+                        </div>
+                        <!-- likes & comments -->
+                        <div class="post__comment mt-3 position-relative">
+                            <!-- likes -->
+                            <div class="
+                      d-flex
+                      align-items-center
+                      top-0
+                      start-0
+                      position-absolute
+                    " style="height: 50px; z-index: 5">
+                                <div class="me-2">
+                                    <i class="text-primary fas fa-thumbs-up"></i>
+                                    <i class="text-danger fab fa-gratipay"></i>
+                                    <i class="text-warning fas fa-grin-squint"></i>
+                                </div>
+                                <p class="m-0 text-muted fs-7">Phu, Tuan, and 3 others</p>
+                            </div>
+                            <!-- comments start-->
+                            <div class="accordion" id="accordionExample">
+                                <div class="accordion-item border-0">
+                                    <!-- comment collapse -->
+                                    <h2 class="accordion-header" id="headingTwo">
+                                        <div class="
+                            accordion-button
+                            collapsed
+                            pointer
+                            d-flex
+                            justify-content-end
+                          " data-bs-toggle="collapse" data-bs-target="#collapsePost1" aria-expanded="false"
+                                            aria-controls="collapsePost1">
+                                            <p class="m-0">2 Comments</p>
+                                        </div>
+                                    </h2>
+                                    <hr />
+                                    <!-- comment & like bar -->
+                                    <div class="d-flex justify-content-around">
+                                        <div class="
+                            dropdown-item
+                            rounded
+                            d-flex
+                            justify-content-center
+                            align-items-center
+                            pointer
+                            text-muted
+                            p-1
+                          ">
+                                            <i class="fas fa-thumbs-up me-3"></i>
+                                            <p class="m-0">Like</p>
+                                        </div>
+                                        <div class="
+                            dropdown-item
+                            rounded
+                            d-flex
+                            justify-content-center
+                            align-items-center
+                            pointer
+                            text-muted
+                            p-1
+                          " data-bs-toggle="collapse" data-bs-target="#collapsePost1" aria-expanded="false"
+                                            aria-controls="collapsePost1">
+                                            <i class="fas fa-comment-alt me-3"></i>
+                                            <p class="m-0">Comment</p>
+                                        </div>
+                                    </div>
+                                    <!-- comment expand -->
+                                    <div id="collapsePost1" class="accordion-collapse collapse"
+                                        aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                        <hr />
+                                        <div class="accordion-body">
+                                            <!-- comment 1 -->
+                                            <div class="d-flex align-items-center my-1">
+                                                <!-- avatar -->
+                                                <img src="https://source.unsplash.com/collection/happy-people"
+                                                    alt="avatar" class="rounded-circle me-2" style="
+                                width: 38px;
+                                height: 38px;
+                                object-fit: cover;
+                              " />
+                                                <!-- comment text -->
+                                                <div class="p-3 rounded comment__input w-100">
+                                                    <!-- comment menu of author -->
+                                                    <div class="d-flex justify-content-end">
+                                                        <!-- icon -->
+                                                        <i class="fas fa-ellipsis-h text-blue pointer"
+                                                            id="post1CommentMenuButton" data-bs-toggle="dropdown"
+                                                            aria-expanded="false"></i>
+                                                        <!-- menu -->
+                                                        <ul class="dropdown-menu border-0 shadow"
+                                                            aria-labelledby="post1CommentMenuButton">
+                                                            <li class="d-flex align-items-center">
+                                                                <a class="
+                                        dropdown-item
+                                        d-flex
+                                        justify-content-around
+                                        align-items-center
+                                        fs-7
+                                      " href="#">
+                                                                    Edit Comment</a>
+                                                            </li>
+                                                            <li class="d-flex align-items-center">
+                                                                <a class="
+                                        dropdown-item
+                                        d-flex
+                                        justify-content-around
+                                        align-items-center
+                                        fs-7
+                                      " href="#">
+                                                                    Delete Comment</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <p class="fw-bold m-0">John</p>
+                                                    <p class="m-0 fs-7 bg-gray p-2 rounded">
+                                                        Lorem ipsum dolor sit amet, consectetur
+                                                        adipiscing elit.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <!-- comment 2 -->
+                                            <div class="d-flex align-items-center my-1">
+                                                <!-- avatar -->
+                                                <img src="https://source.unsplash.com/random/2" alt="avatar"
+                                                    class="rounded-circle me-2" style="
+                                width: 38px;
+                                height: 38px;
+                                object-fit: cover;
+                              " />
+                                                <!-- comment text -->
+                                                <div class="p-3 rounded comment__input w-100">
+                                                    <p class="fw-bold m-0">Jerry</p>
+                                                    <p class="m-0 fs-7 bg-gray p-2 rounded">
+                                                        Lorem ipsum dolor sit amet, consectetur
+                                                        adipiscing elit.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <!-- create comment -->
+                                            <form class="d-flex my-1">
+                                                <!-- avatar -->
+                                                <div>
+                                                    <img src="https://source.unsplash.com/collection/happy-people"
+                                                        alt="avatar" class="rounded-circle me-2" style="
+                                  width: 38px;
+                                  height: 38px;
+                                  object-fit: cover;
+                                " />
+                                                </div>
+                                                <!-- input -->
+                                                <input type="text" class="form-control border-0 rounded-pill bg-gray"
+                                                    placeholder="Write a comment" />
+                                            </form>
+                                            <!-- end -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end -->
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- post 2 -->
+                <div class="bg-white p-4 rounded shadow mt-3">
+                    <!-- author -->
+                    <div class="d-flex justify-content-between">
+                        <!-- avatar -->
+                        <div class="d-flex">
+                            <img src="https://source.unsplash.com/random/1" alt="avatar" class="rounded-circle me-2"
+                                style="width: 38px; height: 38px; object-fit: cover" />
+                            <div>
+                                <p class="m-0 fw-bold">Mike</p>
+                                <span class="text-muted fs-7">May 24 at 1:23 pm</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- post content -->
+                    <div class="mt-3">
+                        <!-- content -->
+                        <div>
+                            <p>
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                Quae fuga incidunt consequatur tenetur doloremque officia
+                                corrupti provident tempore vitae labore?
+                            </p>
+                            <img src="https://source.unsplash.com/random/13" alt="post image"
+                                class="img-fluid rounded" />
+                        </div>
+                        <!-- likes & comments -->
+                        <div class="post__comment mt-3 position-relative">
+                            <!-- likes -->
+                            <div class="
+  d-flex
+  align-items-center
+  top-0
+  start-0
+  position-absolute
+" style="height: 50px; z-index: 5">
+                                <div class="me-2">
+                                    <i class="text-primary fas fa-thumbs-up"></i>
+                                    <i class="text-danger fab fa-gratipay"></i>
+                                    <i class="text-warning fas fa-grin-squint"></i>
+                                </div>
+                                <p class="m-0 text-muted fs-7">Phu, Tuan, and 3 others</p>
+                            </div>
+                            <!-- comments start-->
+                            <div class="accordion" id="accordionExample">
+                                <div class="accordion-item border-0">
+                                    <!-- comment collapse -->
+                                    <h2 class="accordion-header" id="headingTwo">
+                                        <div class="
+        accordion-button
+        collapsed
+        pointer
+        d-flex
+        justify-content-end
+      " data-bs-toggle="collapse" data-bs-target="#collapsePost1" aria-expanded="false" aria-controls="collapsePost1">
+                                            <p class="m-0">2 Comments</p>
+                                        </div>
+                                    </h2>
+                                    <hr />
+                                    <!-- comment & like bar -->
+                                    <div class="d-flex justify-content-around">
+                                        <div class="
+        dropdown-item
+        rounded
+        d-flex
+        justify-content-center
+        align-items-center
+        pointer
+        text-muted
+        p-1
+      ">
+                                            <i class="fas fa-thumbs-up me-3"></i>
+                                            <p class="m-0">Like</p>
+                                        </div>
+                                        <div class="
+        dropdown-item
+        rounded
+        d-flex
+        justify-content-center
+        align-items-center
+        pointer
+        text-muted
+        p-1
+      " data-bs-toggle="collapse" data-bs-target="#collapsePost1" aria-expanded="false" aria-controls="collapsePost1">
+                                            <i class="fas fa-comment-alt me-3"></i>
+                                            <p class="m-0">Comment</p>
+                                        </div>
+                                    </div>
+                                    <!-- comment expand -->
+                                    <div id="collapsePost1" class="accordion-collapse collapse"
+                                        aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                        <hr />
+                                        <div class="accordion-body">
+                                            <!-- comment 1 -->
+                                            <div class="d-flex align-items-center my-1">
+                                                <!-- avatar -->
+                                                <img src="https://source.unsplash.com/collection/happy-people"
+                                                    alt="avatar" class="rounded-circle me-2" style="
+            width: 38px;
+            height: 38px;
+            object-fit: cover;
+          " />
+                                                <!-- comment text -->
+                                                <div class="p-3 rounded comment__input w-100">
+                                                    <!-- comment menu of author -->
+                                                    <div class="d-flex justify-content-end">
+                                                        <!-- icon -->
+                                                        <i class="fas fa-ellipsis-h text-blue pointer"
+                                                            id="post1CommentMenuButton" data-bs-toggle="dropdown"
+                                                            aria-expanded="false"></i>
+                                                        <!-- menu -->
+                                                        <ul class="dropdown-menu border-0 shadow"
+                                                            aria-labelledby="post1CommentMenuButton">
+                                                            <li class="d-flex align-items-center">
+                                                                <a class="
+                    dropdown-item
+                    d-flex
+                    justify-content-around
+                    align-items-center
+                    fs-7
+                  " href="#">
+                                                                    Edit Comment</a>
+                                                            </li>
+                                                            <li class="d-flex align-items-center">
+                                                                <a class="
+                    dropdown-item
+                    d-flex
+                    justify-content-around
+                    align-items-center
+                    fs-7
+                  " href="#">
+                                                                    Delete Comment</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <p class="fw-bold m-0">John</p>
+                                                    <p class="m-0 fs-7 bg-gray p-2 rounded">
+                                                        Lorem ipsum dolor sit amet, consectetur
+                                                        adipiscing elit.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <!-- comment 2 -->
+                                            <div class="d-flex align-items-center my-1">
+                                                <!-- avatar -->
+                                                <img src="https://source.unsplash.com/random/2" alt="avatar"
+                                                    class="rounded-circle me-2" style="
+            width: 38px;
+            height: 38px;
+            object-fit: cover;
+          " />
+                                                <!-- comment text -->
+                                                <div class="p-3 rounded comment__input w-100">
+                                                    <p class="fw-bold m-0">Jerry</p>
+                                                    <p class="m-0 fs-7 bg-gray p-2 rounded">
+                                                        Lorem ipsum dolor sit amet, consectetur
+                                                        adipiscing elit.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <!-- create comment -->
+                                            <form class="d-flex my-1">
+                                                <!-- avatar -->
+                                                <div>
+                                                    <img src="https://source.unsplash.com/collection/happy-people"
+                                                        alt="avatar" class="rounded-circle me-2" style="
+              width: 38px;
+              height: 38px;
+              object-fit: cover;
+            " />
+                                                </div>
+                                                <!-- input -->
+                                                <input type="text" class="form-control border-0 rounded-pill bg-gray"
+                                                    placeholder="Write a comment" />
+                                            </form>
+                                            <!-- end -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ================= CHATBAR ======================= -->
+            <div class="col col-lg-3 px-1  ">
+                <div class="d-none d-lg-block  h-100 overflow-auto">
+                    <!-- Sponsor -->
+                    <h5 class="text-muted">
+                        Sponsored
+                    </h5>
+                    <div>
+                        <!-- First Item -->
+                        <li class="dropdown-item d-flex justify-content-around ">
+                            <a href="#" class="d-flex align-items-center text-dark my-2">
+                                <img src="https://source.unsplash.com/random/1" alt="" class="rounded me-3"
+                                    style="width:100px; height:100px; object-fit: cover;">
+                                <div>
+                                    <p class="m-0">Lorem ipsum ! </p>
+                                    <span class="fs-7 text-muted">www.lorem.com </span>
+                                </div>
+                            </a>
+                        </li>
+                        <!-- Second Item -->
+                        <li class="dropdown-item d-flex justify-content-around">
+                            <a href="#" class="d-flex align-items-center text-dark my-2">
+                                <img src="https://source.unsplash.com/random/" alt="" class="rounded me-3"
+                                    style="width:100px; height:100px; object-fit: cover;">
+                                <div>
+                                    <p class="m-0">Lorem ipsum ! </p>
+                                    <span class="fs-7 text-muted">www.lorem.com </span>
+                                </div>
+                            </a>
+                        </li>
+                    </div>
+                    <hr>
+                    <!-- Contact -->
+                    <div class="d-flex justify-content-between">
+                        <!-- heading -->
+                        <h6 class="text-muted">
+                            Contacts
+                        </h6>
+                        <!-- icons -->
+                        <div class="d-flex justify-content-around">
+                            <i class="fas fa-video text-muted mx-2" type="button"></i>
+                            <i class="fas fa-search text-muted mx-2" type="button"></i>
+                            <i class="fas fa-ellipsis text-muted mx-2" type="button"></i>
+                        </div>
+                    </div>
+
+                    <!-- user -->
+                    <div>
+                        <!-- first item -->
+                        <div class="row my-1 align-items-center">
+                            <div class="col-8">
+                                <a href="#"
+                                    class=" my-auto dropdown-item d-flex align-items-center justify-content-start py-3">
+                                    <div>
+                                        <img src="./image/spongebob.png" alt="Avatar"
+                                            style="width: 40px; height: 40px; object-fit: cover; border: .5px solid;"
+                                            class=" me-2 rounded-circle">
+                                    </div>
+                                    <div>
+                                        <p class="ms-1 my-auto">Spongebob SquarePants </p>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!-- second item -->
+                            <div class="row my-1 align-items-center">
+                                <div class="col-8">
+                                    <a href="#"
+                                        class=" my-auto dropdown-item d-flex align-items-center justify-content-start py-3">
+                                        <div>
+                                            <img src="./image/naruto.jpeg" alt="Avatar"
+                                                style="width: 40px; height: 40px; object-fit: cover; border: .5px solid;"
+                                                class=" me-2 rounded-circle">
+                                        </div>
+                                        <div>
+                                            <p class="ms-2 my-auto"> Naruto Uchiha </p>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <!-- third item -->
+                                <div class="row my-1 align-items-center">
+                                    <div class="col-8">
+                                        <a href="#"
+                                            class=" my-auto dropdown-item d-flex align-items-center justify-content-start py-3">
+                                            <div>
+                                                <img src="./image/goku.jpeg" alt="Avatar"
+                                                    style="width: 40px; height: 40px; object-fit: cover; border: .5px solid;"
+                                                    class=" me-2 rounded-circle">
+                                            </div>
+                                            <div>
+                                                <p class="ms-2 my-auto"> Kakarot Son Goku </p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <!-- fourth  item -->
+                                    <div class="row my-1 align-items-center">
+                                        <div class="col-8">
+                                            <a href="#"
+                                                class=" my-auto dropdown-item d-flex align-items-center justify-content-start py-3">
+                                                <div>
+                                                    <img src="./image/buzz.jpeg" alt="Avatar"
+                                                        style="width: 40px; height: 40px; object-fit: cover; border: .5px solid;"
+                                                        class=" me-2 rounded-circle">
+                                                </div>
+                                                <div>
+                                                    <p class="ms-2 my-auto"> Buzz Lightyear </p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <!-- fifth  item -->
+                                        <div class="row my-1 align-items-center">
+                                            <div class="col-8">
+                                                <a href="#"
+                                                    class=" my-auto dropdown-item d-flex align-items-center justify-content-start py-3">
+                                                    <div>
+                                                        <img src="./image/car.jpeg" alt="Avatar"
+                                                            style="width: 40px; height: 40px; object-fit: cover; border: .5px solid;"
+                                                            class=" me-2 rounded-circle">
+                                                    </div>
+                                                    <div>
+                                                        <p class="ms-2 my-auto"> Car Johnson </p>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+
+
+                                        </div>
+
+
+                                    </div>
+
+
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Boots trap-->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+            <!-- main js -->
+            <script src="./main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,107 @@
+<div class="modal fade" id="createShortcut" tabindex="-1" aria-labelledby="createModalLabel" aria-hidden="true">
+    <div class="modal-dialog modial-dialog-centered">
+        <div class="modal-content">
+            <!-- head -->
+            <div class="modal-header">
+                <div>
+                    <h2 class="modal-title" id="createModalLabel">Edit your shortcuts</h2>
+                </div>
+                <button type="button" class="btn-close bg-secondary" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+                <hr class="text-muted">
+                <p>Shortcuts provide quick access to what you do most on Facebook. Your shortcuts are sorted
+                    automatically, but you can pin something so it's always shown at the top or hide it from the list.
+                </p>
+            </div>
+            <!-- body -->
+            <div class="modal-body">
+                <form>
+                    <!-- name -->
+                    <div class="row">
+                        <div class="col">
+                            <input type="text" class="form-control" placeholder="First name">
+                        </div>
+
+                        <div class="col">
+                            <input type="text" class="form-control" placeholder="Last name">
+                        </div>
+                    </div>
+                    <!-- email & password -->
+                    <input type="text" class="form-control my-3" placeholder="Mobile number or email address">
+                    <input type="password" class="form-control my-3" placeholder="New password">
+                    <!-- DOB -->
+                    <div class="row my-3">
+                        <span class="text-muted fs-7">Date of birth <i class="fas fa-question-circle"
+                                data-bs-toggle="popover" type="button" data-bs-content="Providing your birthday helps make sure you get the right Facebook experience for your age. If you want to change who sees this, go to the About section of your profile. For more details, please visit our Privacy Policy.
+                                            "></i></span>
+
+                        <div class="col">
+                            <select class="form-select">
+                                <option value="1">one</option>
+                                <option value="2">two</option>
+                                <option value="3">three</option>
+                            </select>
+                        </div>
+                        <div class="col">
+                            <select class="form-select">
+                                <option value="1">one</option>
+                                <option value="2">two</option>
+                                <option value="3">three</option>
+                            </select>
+                        </div>
+                        <div class="col">
+                            <select class="form-select">
+                                <option value="1">one</option>
+                                <option value="2">two</option>
+                                <option value="3">three</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <!-- gender -->
+                    <div class="row my-3">
+                        <span class="text-muted fs-7">Gender <i class="fas fa-question-circle" data-bs-toggle="popover"
+                                type="button"
+                                data-bs-content="And here's some amazing content. It's very engaging. Right?"></i></span>
+                        <div class="col">
+                            <div class="border rounded p-2">
+                                <label class="form-check-label" for="flexRadioDefault1">Male </label>
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault1" />
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="border rounded p-2">
+                                <label class="form-check-label" for="flexRadioDefault1">Female </label>
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault2" />
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="border rounded p-2">
+                                <label class="form-check-label" for="flexRadioDefault1">Custom </label>
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault3" />
+                            </div>
+                        </div>
+                    </div>
+                    <!-- disclaimer -->
+                    <div>
+                        <span class="text-muted fs-7">People who use our service may have uploaded your
+                            contact information to Facebook. Learn more.</span>
+                    </div>
+                    <div class="mt-3">
+                        <span class="text-muted fs-7">By clicking Sign Up, you agree to our Terms,
+                            Privacy Policy and Cookies Policy. You may receive SMS Notifications from us
+                            and can opt out any time.</span>
+                    </div>
+                    <!-- btn -->
+                    <div class="mt-3 text-center">
+                        <button type="button" class="btn-primary btn btn-success" data-dismiss="modal">Sign up</button>
+                    </div>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
